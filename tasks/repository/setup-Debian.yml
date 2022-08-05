@@ -22,4 +22,3 @@
   apt:
     update_cache: yes
   changed_when: false
-
