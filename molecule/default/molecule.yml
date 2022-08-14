@@ -5,7 +5,8 @@ driver:
   name: docker
 platforms:
   - name: linux
-    image: diodonfrost/${image:-ansible-centos:8}
+    image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
+    command: /lib/systemd/systemd
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: yes
