@@ -3,13 +3,13 @@ name: molecule
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 18 * * sun'
+  # schedule:
+  #   - cron: '0 18 * * sun'
 
 jobs:
   build:
     name: ${{ matrix.image }} puppet ${{ matrix.puppet_version }}
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
